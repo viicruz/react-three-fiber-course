@@ -31,9 +31,11 @@ export function Cube(props: CubeProps) {
   const ref = useRef<THREE.Mesh>(null)
 
   useFrame((state, delta) => {
-    if(ref.current){
-      ref.current.rotation.x += delta * 2
-    } 
+    if (ref.current) {
+      ref.current.rotation.x += delta
+      ref.current.rotation.y += delta * 2.0
+      ref.current.position.z = Math.sin(state.clock.elapsedTime) * 2
+    }
   });
 
   return (
