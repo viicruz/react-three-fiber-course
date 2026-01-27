@@ -1,9 +1,13 @@
-import { Canvas } from '@react-three/fiber'
+import { Canvas, } from '@react-three/fiber'
 import './App.css'
 
-const App = () =>  {
+const App = () => {
   return (
     <Canvas>
+      <mesh>
+        <boxGeometry />
+        <meshStandardMaterial />
+      </mesh>
     </Canvas>
   )
 }
